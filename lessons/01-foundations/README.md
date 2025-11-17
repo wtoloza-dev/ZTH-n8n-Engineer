@@ -50,9 +50,10 @@ Work through these sections in order:
 
 Complete these exercises to reinforce your learning:
 
-1. **[Exercise 1: Explore n8n.io](practice/exercise-01-exploration.md)** - 3 min
-2. **[Exercise 2: Identify Use Cases](practice/exercise-02-identify-cases.md)** - 4 min
-3. **[Exercise 3: Design a Workflow](practice/exercise-03-design-workflow.md)** - 3 min
+1. **[Run n8n Locally](practice/01-run-locally.md)** - 5 min
+2. **[Understanding n8n Storage](practice/02-storage-management.md)** - 5 min
+3. **[Identify Use Cases](practice/03-identify-cases.md)** - Coming soon
+4. **[Design a Workflow](practice/04-design-workflow.md)** - Coming soon
 
 ---
 
@@ -60,9 +61,9 @@ Complete these exercises to reinforce your learning:
 
 Additional materials to support your learning:
 
-- **[Glossary](resources/glossary.md)** - Technical terms explained
+- **[Glossary](../../resources/glossary.md)** - Technical terms explained (global)
 - **[Tool Comparison](resources/tool-comparison.md)** - n8n vs Zapier vs Make
-- **[Completion Checklist](resources/checklist.md)** - Verify your understanding
+- **[Interactive Exam](resources/exam.md)** - Test your knowledge with AI
 - **[Useful Links](resources/useful-links.md)** - Official docs and videos
 
 ---
@@ -71,8 +72,8 @@ Additional materials to support your learning:
 
 Once you've completed all sections above:
 
-1. Review the [Completion Checklist](resources/checklist.md)
-2. Make sure you can answer all checkpoint questions
+1. Take the [Interactive Exam](resources/exam.md) to verify your knowledge
+2. Score 75%+ to demonstrate mastery
 3. Move to the next lesson
 
 **👉 [Go to Lesson 2: Docker From Zero →](../02-docker-basics)**

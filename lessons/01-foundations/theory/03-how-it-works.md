@@ -19,12 +19,6 @@ graph TD
     C --> C1[Individual tasks]
     D --> D1[What starts it]
     E --> E1[Data flow]
-    
-    style A fill:#d1ecf1
-    style B fill:#d4edda
-    style C fill:#d4edda
-    style D fill:#d4edda
-    style E fill:#d4edda
 ```
 
 ---
@@ -48,11 +42,6 @@ graph LR
     A[Trigger:<br/>New Email] --> B[Node 1:<br/>Extract Attachment]
     B --> C[Node 2:<br/>Save to Drive]
     C --> D[Node 3:<br/>Send Notification]
-    
-    style A fill:#fff3cd
-    style B fill:#d1ecf1
-    style C fill:#d1ecf1
-    style D fill:#d4edda
 ```
 
 **This workflow:**
@@ -98,8 +87,6 @@ graph TD
     B --> C[Node Output]
     
     D[Configuration<br/>• To: email@example.com<br/>• Subject: Hello<br/>• Body: Message text] --> B
-    
-    style B fill:#d1ecf1
 ```
 
 Every node has:
@@ -133,8 +120,6 @@ graph TD
     A --> C[Schedule<br/>Time-based]
     A --> D[Polling<br/>Check for changes]
     A --> E[Manual<br/>Click to run]
-    
-    style A fill:#fff3cd
 ```
 
 ### Trigger Examples
@@ -192,10 +177,6 @@ sequenceDiagram
 graph LR
     A[Node A] -->|Data flows| B[Node B]
     B -->|Data flows| C[Node C]
-    
-    style A fill:#d1ecf1
-    style B fill:#d1ecf1
-    style C fill:#d4edda
 ```
 
 ### Data Flow
@@ -231,13 +212,6 @@ graph TD
     C --> E[Google Sheets:<br/>Log contact]
     D --> E
     E --> F[Airtable:<br/>Create CRM record]
-    
-    style A fill:#fff3cd
-    style B fill:#f9d6d5
-    style C fill:#d1ecf1
-    style D fill:#d1ecf1
-    style E fill:#d1ecf1
-    style F fill:#d4edda
 ```
 
 **Step-by-step:**

@@ -21,8 +21,6 @@ graph LR
     C --> C2[Deploy to production]
     C --> C3[Scale & maintain]
     
-    style B fill:#d1ecf1
-    style C fill:#d4edda
 ```
 
 ---
@@ -156,8 +154,6 @@ graph TD
     C --> C3[Fix problems]
     C --> C4[Upgrade parts]
     
-    style B fill:#d1ecf1
-    style C fill:#d4edda
 ```
 
 **Using n8n = Driving a car**
@@ -190,7 +186,6 @@ graph TD
     A --> H[Monitoring & Backups]
     A --> I[Troubleshooting]
     
-    style A fill:#d1ecf1
 ```
 
 - How to install n8n with Docker
@@ -278,9 +273,6 @@ graph TD
     B1 --> D[n8n Platform Running]
     D --> C1
     
-    style B fill:#d4edda
-    style C fill:#d1ecf1
-    style D fill:#fff3cd
 ```
 
 **You need BOTH roles:**
@@ -326,7 +318,6 @@ graph LR
     A -->|Can do| F[Troubleshoot issues]
     A -->|Can do| G[Maintain in production]
     
-    style A fill:#d4edda
 ```
 
 **You'll be certified as:** n8n Infrastructure Engineer

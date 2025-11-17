@@ -78,9 +78,6 @@ graph LR
     C -->|No| F[Ignore]
     E --> G[Weekly Report]
     
-    style D fill:#d1ecf1
-    style E fill:#d1ecf1
-    style G fill:#d1ecf1
 ```
 
 **Workflow:**
@@ -176,8 +173,6 @@ graph TD
     F --> I[Add to CRM]
     G --> J[Add to Drip Campaign]
     
-    style E fill:#d4edda
-    style H fill:#d4edda
 ```
 
 **Result:**
@@ -203,7 +198,6 @@ graph LR
     E --> H[Add to Newsletter Queue]
     E --> I[Notify Team in Slack]
     
-    style E fill:#d1ecf1
 ```
 
 **Automation:**

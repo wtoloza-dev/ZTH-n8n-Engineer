@@ -24,7 +24,6 @@ graph TD
     D --> D2[Temporal]
     D --> D3[Custom Code]
     
-    style C1 fill:#d4edda
 ```
 
 ---
@@ -59,7 +58,6 @@ graph TD
     A --> E[Custom code needed]
     A --> F[Complex workflows]
     
-    style A fill:#d1ecf1
 ```
 
 ✅ **n8n is better when:**
@@ -96,8 +94,6 @@ graph LR
     E --> G[Cloud-first]
     E --> H[Designer-friendly]
     
-    style A fill:#d4edda
-    style E fill:#d1ecf1
 ```
 
 **n8n advantages:**
@@ -149,8 +145,6 @@ graph TD
     G -->|Yes| E
     G -->|No| C
     
-    style C fill:#d4edda
-    style E fill:#d1ecf1
 ```
 
 ### Use n8n when:
@@ -183,8 +177,6 @@ graph TD
     A --> D[Zapier<br/>$299-599/month<br/>Professional/Team]
     A --> E[Make<br/>$99-299/month<br/>Pro/Teams]
     
-    style B fill:#d4edda
-    style C fill:#d4edda
 ```
 
 **Annual savings with self-hosted n8n:**

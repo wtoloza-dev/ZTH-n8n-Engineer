@@ -1,6 +1,6 @@
 # Glossary of Terms
 
-Quick reference for technical terms used in this lesson and throughout the course.
+Quick reference for technical terms used throughout the course.
 
 ---
 
@@ -186,5 +186,5 @@ If you encounter a term not listed here:
 
 ---
 
-**Back to:** [Lesson 1 Overview](../README.md)
+**Back to:** [Main Resources](../README.md)
 

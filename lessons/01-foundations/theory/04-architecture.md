@@ -24,13 +24,6 @@ graph TD
     G[External APIs] <-->|Webhooks| C
     G <-->|API Calls| E
     
-    style A fill:#e9ecef
-    style B fill:#d1ecf1
-    style C fill:#d1ecf1
-    style D fill:#fff3cd
-    style E fill:#d4edda
-    style F fill:#f9d6d5
-    style G fill:#e9ecef
 ```
 
 ---
@@ -48,7 +41,6 @@ graph LR
     A --> D[Execution History]
     A --> E[Settings & Credentials]
     
-    style A fill:#d1ecf1
 ```
 
 **What it does:**
@@ -80,7 +72,6 @@ graph TD
     D --> H[Cron Jobs]
     E --> I[Execution Control]
     
-    style A fill:#d1ecf1
 ```
 
 **What it does:**
@@ -112,7 +103,6 @@ graph TD
     D --> D1[Execution logs<br/>Success/failure data]
     E --> E1[User settings<br/>System config]
     
-    style A fill:#f9d6d5
 ```
 
 **What it stores:**
@@ -147,11 +137,6 @@ graph LR
     D -->|Complete| F
     E -->|Complete| F
     
-    style A fill:#d1ecf1
-    style B fill:#fff3cd
-    style C fill:#d4edda
-    style D fill:#d4edda
-    style E fill:#d4edda
 ```
 
 **What it does:**
@@ -186,7 +171,6 @@ graph TD
     F --> G[Save Results]
     G --> H[Complete Job]
     
-    style A fill:#d4edda
 ```
 
 **What they do:**
@@ -203,9 +187,6 @@ graph TD
     C[Medium Volume<br/>10-100 workflows/min] --> D[2-5 Workers]
     E[High Volume<br/>100+ workflows/min] --> F[5-20+ Workers]
     
-    style B fill:#d4edda
-    style D fill:#d1ecf1
-    style F fill:#fff3cd
 ```
 
 ---
@@ -221,8 +202,6 @@ graph TD
     
     B --> D[UI + API + Execution<br/>All in one process]
     
-    style B fill:#d1ecf1
-    style C fill:#e9ecef
 ```
 
 **Characteristics:**
@@ -252,13 +231,6 @@ graph TD
     F <--> H
     G <--> H
     
-    style B fill:#e9ecef
-    style C fill:#d1ecf1
-    style D fill:#fff3cd
-    style E fill:#d4edda
-    style F fill:#d4edda
-    style G fill:#d4edda
-    style H fill:#f9d6d5
 ```
 
 **Characteristics:**
@@ -323,7 +295,6 @@ graph TD
     D --> D1[Job coordination<br/>Main ↔ Workers]
     E --> E1[Data persistence<br/>All ↔ PostgreSQL]
     
-    style A fill:#d1ecf1
 ```
 
 ---
