@@ -31,15 +31,15 @@ docker --version
 First, download the official n8n image from Docker Hub:
 
 ```bash
-docker pull n8n/n8n:latest
+docker pull n8nio/n8n:latest
 ```
 
 **Expected output:**
 ```
-latest: Pulling from n8n/n8n
+latest: Pulling from n8nio/n8n
 abc123def456: Pull complete
 ...
-Status: Downloaded newer image for n8n/n8n:latest
+Status: Downloaded newer image for n8nio/n8n:latest
 ```
 
 **Verify the image:**
@@ -57,14 +57,14 @@ Start n8n in a container:
 docker run -d \
   --name n8n \
   -p 5678:5678 \
-  n8n/n8n
+  n8nio/n8n
 ```
 
 **Command breakdown:**
 - `-d` → Run in detached mode (background)
 - `--name n8n` → Name the container "n8n"
 - `-p 5678:5678` → Map port 5678 (host:container)
-- `n8n/n8n` → Image to use
+- `n8nio/n8n` → Image to use
 
 **Verify the container is running:**
 ```bash
@@ -74,7 +74,7 @@ docker ps
 Expected output:
 ```
 CONTAINER ID   IMAGE      COMMAND   CREATED         STATUS         PORTS                    NAMES
-abc123def456   n8n/n8n    "n8n"     5 seconds ago   Up 4 seconds   0.0.0.0:5678->5678/tcp   n8n
+abc123def456   n8nio/n8n    "n8n"     5 seconds ago   Up 4 seconds   0.0.0.0:5678->5678/tcp   n8n
 ```
 
 ---
@@ -210,7 +210,7 @@ docker ps -a | grep n8n
 
 ```bash
 # Run n8n
-docker run -d --name n8n -p 5678:5678 n8n/n8n
+docker run -d --name n8n -p 5678:5678 n8nio/n8n
 
 # Access http://localhost:5678 and create a workflow
 
@@ -219,7 +219,7 @@ docker stop n8n
 docker rm n8n
 
 # Run n8n again
-docker run -d --name n8n -p 5678:5678 n8n/n8n
+docker run -d --name n8n -p 5678:5678 n8nio/n8n
 
 # Access http://localhost:5678
 # ❌ Your workflow is GONE!
@@ -239,7 +239,7 @@ If port 5678 is already in use:
 # Error: Bind for 0.0.0.0:5678 failed: port is already allocated
 
 # Solution 1: Use different host port
-docker run -d --name n8n -p 8080:5678 n8n/n8n
+docker run -d --name n8n -p 8080:5678 n8nio/n8n
 # Access at http://localhost:8080
 
 # Solution 2: Stop conflicting container
@@ -273,7 +273,7 @@ docker logs n8n
 
 # Remove and try again
 docker rm -f n8n
-docker run -d --name n8n -p 5678:5678 n8n/n8n
+docker run -d --name n8n -p 5678:5678 n8nio/n8n
 ```
 
 ### Can't Access n8n Interface
@@ -318,8 +318,8 @@ docker logs n8n
 
 ```bash
 # Essential Docker commands for n8n
-docker pull n8n/n8n                    # Download image
-docker run -d --name n8n -p 5678:5678 n8n/n8n  # Run container
+docker pull n8nio/n8n                    # Download image
+docker run -d --name n8n -p 5678:5678 n8nio/n8n  # Run container
 docker ps                              # List running containers
 docker ps -a                           # List all containers
 docker logs n8n                        # View logs

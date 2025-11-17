@@ -249,11 +249,11 @@ sequenceDiagram
     participant DH as Docker Hub
     participant C as Container
     
-    U->>DC: docker run n8n/n8n
+    U->>DC: docker run n8nio/n8n
     DC->>DE: Check for image locally
     
     alt Image not found locally
-        DE->>DH: Pull n8n/n8n image
+        DE->>DH: Pull n8nio/n8n image
         DH->>DE: Download image
     end
     
@@ -264,7 +264,7 @@ sequenceDiagram
 ```
 
 **Step-by-step:**
-1. You run `docker run n8n/n8n`
+1. You run `docker run n8nio/n8n`
 2. Docker checks if image exists locally
 3. If not, downloads from Docker Hub
 4. Creates container from image
@@ -305,7 +305,7 @@ sequenceDiagram
 docker run -d \
   -p 5678:5678 \
   -v ~/.n8n:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 ```
 
 **Benefits:**

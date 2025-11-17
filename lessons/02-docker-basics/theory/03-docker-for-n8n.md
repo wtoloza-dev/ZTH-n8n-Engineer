@@ -62,9 +62,9 @@ Prod: Debian 11, Node 20.x    ❌ Different
 
 **With Docker:**
 ```
-Dev: n8n/n8n:1.19.0      ✅ Identical
-Staging: n8n/n8n:1.19.0  ✅ Identical
-Prod: n8n/n8n:1.19.0     ✅ Identical
+Dev: n8nio/n8n:1.19.0      ✅ Identical
+Staging: n8nio/n8n:1.19.0  ✅ Identical
+Prod: n8nio/n8n:1.19.0     ✅ Identical
 ```
 
 ---
@@ -95,15 +95,15 @@ All dependencies are bundled in the Docker image:
 
 ```bash
 # Current version
-docker run n8n/n8n:1.18.0
+docker run n8nio/n8n:1.18.0
 
 # Upgrade to new version
 docker stop n8n
-docker run n8n/n8n:1.19.0
+docker run n8nio/n8n:1.19.0
 
 # Rollback if issues occur
 docker stop n8n
-docker run n8n/n8n:1.18.0  # Back to previous version
+docker run n8nio/n8n:1.18.0  # Back to previous version
 ```
 
 ```mermaid
@@ -158,7 +158,7 @@ Control how much resources n8n can use:
 docker run \
   --cpus="2.0" \
   --memory="2g" \
-  n8n/n8n
+  n8nio/n8n
 ```
 
 ```mermaid
@@ -177,27 +177,27 @@ graph TD
 
 ```bash
 # Main repository
-n8n/n8n
+n8nio/n8n
 
 # Common tags
-n8n/n8n:latest              # Latest stable version
-n8n/n8n:1.19.0             # Specific version
-n8n/n8n:latest-alpine      # Alpine Linux base
-n8n/n8n:latest-debian      # Debian base
+n8nio/n8n:latest              # Latest stable version
+n8nio/n8n:1.19.0             # Specific version
+n8nio/n8n:latest-alpine      # Alpine Linux base
+n8nio/n8n:latest-debian      # Debian base
 ```
 
 ### Image Variants
 
 **1. Standard (Debian-based)**
 ```bash
-docker pull n8n/n8n:latest
+docker pull n8nio/n8n:latest
 # Size: ~500MB
 # Use case: General purpose
 ```
 
 **2. Alpine (Lightweight)**
 ```bash
-docker pull n8n/n8n:latest-alpine
+docker pull n8nio/n8n:latest-alpine
 # Size: ~200MB
 # Use case: Resource-constrained environments
 ```
@@ -206,7 +206,7 @@ docker pull n8n/n8n:latest-alpine
 
 ```mermaid
 graph LR
-    A[n8n Release 1.19.0] --> B[Docker Image<br/>n8n/n8n:1.19.0]
+    A[n8n Release 1.19.0] --> B[Docker Image<br/>n8nio/n8n:1.19.0]
     B --> C[Tagged as 'latest']
     
     D[User pulls 'latest'] --> C
@@ -216,10 +216,10 @@ graph LR
 **Best Practice:**
 ```bash
 # ❌ Don't use 'latest' in production (unpredictable)
-docker run n8n/n8n:latest
+docker run n8nio/n8n:latest
 
 # ✅ Use specific version (predictable)
-docker run n8n/n8n:1.19.0
+docker run n8nio/n8n:1.19.0
 ```
 
 ---
@@ -244,7 +244,7 @@ docker run -d \
   --name n8n \
   -p 5678:5678 \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 ```
 
 **Use Case:** Development, testing, small personal projects
@@ -307,7 +307,7 @@ docker run -d \
   -e DB_POSTGRESDB_USER=n8n \
   -e DB_POSTGRESDB_PASSWORD=n8n_password \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 ```
 
 ### Key Environment Variables
@@ -343,22 +343,22 @@ graph TD
 ### Without Volume (Data Loss)
 
 ```bash
-docker run -d --name n8n n8n/n8n
+docker run -d --name n8n n8nio/n8n
 # Create workflows
 docker stop n8n
 docker rm n8n
-docker run -d --name n8n n8n/n8n
+docker run -d --name n8n n8nio/n8n
 # ❌ All workflows GONE!
 ```
 
 ### With Volume (Data Persists)
 
 ```bash
-docker run -d --name n8n -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -d --name n8n -v n8n-data:/home/node/.n8n n8nio/n8n
 # Create workflows
 docker stop n8n
 docker rm n8n
-docker run -d --name n8n -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -d --name n8n -v n8n-data:/home/node/.n8n n8nio/n8n
 # ✅ Workflows PRESERVED!
 ```
 
@@ -408,7 +408,7 @@ docker run -d --name n8n -v n8n-data:/home/node/.n8n n8n/n8n
 ## Check Your Understanding
 
 1. What are 3 main benefits of running n8n with Docker?
-2. What's the difference between `n8n/n8n:latest` and `n8n/n8n:1.19.0`?
+2. What's the difference between `n8nio/n8n:latest` and `n8nio/n8n:1.19.0`?
 3. Why do we need volumes for n8n?
 4. What additional containers does a production n8n setup need?
 

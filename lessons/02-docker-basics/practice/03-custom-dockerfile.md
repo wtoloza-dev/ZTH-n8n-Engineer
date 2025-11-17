@@ -35,7 +35,7 @@ touch Dockerfile
 
 ```dockerfile
 # Use official n8n image as base
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 # Switch to root user to install packages
 USER root
@@ -87,7 +87,7 @@ docker build -t my-custom-n8n:1.0 .
  => [internal] load build definition from Dockerfile
  => => transferring dockerfile: 521B
  => [internal] load .dockerignore
- => [1/6] FROM n8n/n8n:latest
+ => [1/6] FROM n8nio/n8n:latest
  => [2/6] RUN apk add --no-cache python3 py3-pip
  => [3/6] RUN npm install -g moment-timezone
  => [4/6] RUN mkdir -p /home/node/.n8n/custom
@@ -200,7 +200,7 @@ RUN apk add --no-cache python3 g++ make
 RUN npm install -g n8n-nodes-custom-package || echo "Package not found, continuing..."
 
 # Stage 2: Runtime
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 USER root
 
@@ -237,7 +237,7 @@ docker build -f Dockerfile.advanced -t my-n8n-advanced:1.0 .
 Create `Dockerfile.custom-nodes`:
 
 ```dockerfile
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 USER root
 
@@ -270,7 +270,7 @@ EXPOSE 5678
 Create `Dockerfile.args` with build-time variables:
 
 ```dockerfile
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 # Build arguments
 ARG NODE_ENV=production
@@ -309,7 +309,7 @@ docker build \
 Create `Dockerfile.optimized`:
 
 ```dockerfile
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 USER root
 
@@ -340,7 +340,7 @@ docker images | grep my-n8n
 
 ```mermaid
 graph BT
-    L1[Layer 1: n8n/n8n base<br/>~200 MB] --> L2[Layer 2: Python install<br/>+30 MB]
+    L1[Layer 1: n8nio/n8n base<br/>~200 MB] --> L2[Layer 2: Python install<br/>+30 MB]
     L2 --> L3[Layer 3: NPM packages<br/>+10 MB]
     L3 --> L4[Layer 4: File copies<br/>+1 MB]
     L4 --> IMG[Custom Image<br/>~241 MB total]
@@ -394,17 +394,17 @@ RUN apk add --no-cache python3 && \
 
 ```dockerfile
 # ❌ Unpredictable
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 # ✅ Predictable, reproducible
-FROM n8n/n8n:1.19.0
+FROM n8nio/n8n:1.19.0
 ```
 
 ### 5. Order Matters
 
 ```dockerfile
 # ✅ Good order (rarely changing → frequently changing)
-FROM n8n/n8n:1.19.0
+FROM n8nio/n8n:1.19.0
 RUN apk add --no-cache python3  # Changes rarely
 COPY config.json /app/           # Changes occasionally
 COPY . /app/                     # Changes frequently

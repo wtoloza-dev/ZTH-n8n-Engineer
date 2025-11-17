@@ -53,7 +53,7 @@ graph TB
 
 ```bash
 # You type commands here
-docker run n8n/n8n
+docker run n8nio/n8n
 docker ps
 docker logs my-container
 docker build -t my-image .
@@ -110,7 +110,7 @@ graph BT
     L3 --> L4[Layer 4: n8n Application<br/>50 MB]
     L4 --> L5[Layer 5: Configuration<br/>1 MB]
     
-    L5 --> IMG[Complete Image<br/>n8n/n8n:latest<br/>206 MB total]
+    L5 --> IMG[Complete Image<br/>n8nio/n8n:latest<br/>206 MB total]
 ```
 
 **Why Layers Matter:**
@@ -139,9 +139,9 @@ CMD ["node", "index.js"]    # Layer 6: Startup command
 registry/repository:tag
 
 # Examples
-n8n/n8n:latest           # Latest stable version
-n8n/n8n:1.19.0          # Specific version
-n8n/n8n:latest-alpine    # Latest with Alpine base
+n8nio/n8n:latest           # Latest stable version
+n8nio/n8n:1.19.0          # Specific version
+n8nio/n8n:latest-alpine    # Latest with Alpine base
 ```
 
 ---
@@ -176,7 +176,7 @@ stateDiagram-v2
 
 ```mermaid
 graph LR
-    A[Image<br/>n8n/n8n<br/>Read-only template] -->|docker run| B[Container 1<br/>Writable layer<br/>Running n8n]
+    A[Image<br/>n8nio/n8n<br/>Read-only template] -->|docker run| B[Container 1<br/>Writable layer<br/>Running n8n]
     A -->|docker run| C[Container 2<br/>Writable layer<br/>Running n8n]
     
     B -->|Changes| B1[Writable Layer<br/>User data, logs, temp files]
@@ -201,7 +201,7 @@ graph TB
         C[Community Images]
         P[Private Repositories]
         
-        O --> N8N[n8n/n8n]
+        O --> N8N[n8nio/n8n]
         O --> PG[postgres]
         O --> RED[redis]
     end
@@ -216,7 +216,7 @@ graph TB
 
 **1. Docker Hub (Public)**
 ```bash
-docker pull n8n/n8n              # From Docker Hub
+docker pull n8nio/n8n              # From Docker Hub
 docker pull postgres:15          # Official PostgreSQL
 ```
 
@@ -293,21 +293,21 @@ graph LR
 
 **Without Volumes:**
 ```bash
-docker run n8n/n8n
+docker run n8nio/n8n
 # Create workflow, stop container
 docker stop <container>
 # Start new container
-docker run n8n/n8n
+docker run n8nio/n8n
 # ❌ Workflow data is GONE!
 ```
 
 **With Volumes:**
 ```bash
-docker run -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -v n8n-data:/home/node/.n8n n8nio/n8n
 # Create workflow, stop container
 docker stop <container>
 # Start new container with same volume
-docker run -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -v n8n-data:/home/node/.n8n n8nio/n8n
 # ✅ Workflow data is PRESERVED!
 ```
 
@@ -315,17 +315,17 @@ docker run -v n8n-data:/home/node/.n8n n8n/n8n
 
 **1. Named Volumes**
 ```bash
-docker run -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -v n8n-data:/home/node/.n8n n8nio/n8n
 ```
 
 **2. Bind Mounts**
 ```bash
-docker run -v /home/user/n8n-data:/home/node/.n8n n8n/n8n
+docker run -v /home/user/n8n-data:/home/node/.n8n n8nio/n8n
 ```
 
 **3. tmpfs (temporary)**
 ```bash
-docker run --tmpfs /tmp n8n/n8n
+docker run --tmpfs /tmp n8nio/n8n
 ```
 
 ---
@@ -362,13 +362,13 @@ graph TB
 
 ```bash
 # Pull image from registry
-docker pull n8n/n8n:latest
+docker pull n8nio/n8n:latest
 
 # List images
 docker images
 
 # Remove image
-docker rmi n8n/n8n:latest
+docker rmi n8nio/n8n:latest
 
 # Build image from Dockerfile
 docker build -t my-n8n:latest .
@@ -378,7 +378,7 @@ docker build -t my-n8n:latest .
 
 ```bash
 # Run container (create + start)
-docker run -d --name n8n n8n/n8n
+docker run -d --name n8n n8nio/n8n
 
 # List running containers
 docker ps

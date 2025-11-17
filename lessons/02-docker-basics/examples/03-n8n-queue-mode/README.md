@@ -169,7 +169,7 @@ docker run -d \
   -e N8N_BASIC_AUTH_USER=admin \
   -e N8N_BASIC_AUTH_PASSWORD=secure_admin_password \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n:latest \
+  n8nio/n8n:latest \
   n8n start
 ```
 
@@ -190,7 +190,7 @@ docker run -d \
   -e QUEUE_BULL_REDIS_HOST=n8n-redis \
   -e QUEUE_BULL_REDIS_PORT=6379 \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n:latest \
+  n8nio/n8n:latest \
   n8n worker
 ```
 
@@ -254,7 +254,7 @@ docker run -d \
   -e EXECUTIONS_MODE=queue \
   -e QUEUE_BULL_REDIS_HOST=n8n-redis \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n:latest \
+  n8nio/n8n:latest \
   n8n worker
 
 docker run -d \
@@ -269,7 +269,7 @@ docker run -d \
   -e EXECUTIONS_MODE=queue \
   -e QUEUE_BULL_REDIS_HOST=n8n-redis \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n:latest \
+  n8nio/n8n:latest \
   n8n worker
 ```
 
@@ -348,7 +348,7 @@ docker run -d \
   -e EXECUTIONS_MODE=queue \
   -e QUEUE_BULL_REDIS_HOST=n8n-redis \
   -e QUEUE_WORKER_TIMEOUT=30 \
-  n8n/n8n:latest \
+  n8nio/n8n:latest \
   n8n worker --concurrency=10
 ```
 

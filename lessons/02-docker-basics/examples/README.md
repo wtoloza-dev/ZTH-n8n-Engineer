@@ -72,7 +72,7 @@ nano .env
 
 1. **Start Simple:** Begin with the basic example, then progress to more complex setups
 2. **Use Volumes:** Always mount volumes for data persistence
-3. **Version Pinning:** Use specific versions in production (e.g., `n8n/n8n:1.19.0`)
+3. **Version Pinning:** Use specific versions in production (e.g., `n8nio/n8n:1.19.0`)
 4. **Environment Variables:** Never commit `.env` files with real credentials
 5. **Backup:** Regularly backup your volumes
 

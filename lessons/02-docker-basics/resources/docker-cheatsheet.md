@@ -8,11 +8,11 @@ Quick reference guide for Docker commands used with n8n.
 
 ```bash
 # Run n8n (basic)
-docker run -d --name n8n -p 5678:5678 -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -d --name n8n -p 5678:5678 -v n8n-data:/home/node/.n8n n8nio/n8n
 
 # Run n8n with PostgreSQL
 docker run -d --name postgres --network n8n-net -e POSTGRES_USER=n8n -e POSTGRES_PASSWORD=pass -e POSTGRES_DB=n8n postgres:15
-docker run -d --name n8n --network n8n-net -p 5678:5678 -e DB_TYPE=postgresdb -e DB_POSTGRESDB_HOST=postgres -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -d --name n8n --network n8n-net -p 5678:5678 -e DB_TYPE=postgresdb -e DB_POSTGRESDB_HOST=postgres -v n8n-data:/home/node/.n8n n8nio/n8n
 ```
 
 ---
@@ -21,24 +21,24 @@ docker run -d --name n8n --network n8n-net -p 5678:5678 -e DB_TYPE=postgresdb -e
 
 ```bash
 # Pull image
-docker pull n8n/n8n:latest
-docker pull n8n/n8n:1.19.0          # Specific version
+docker pull n8nio/n8n:latest
+docker pull n8nio/n8n:1.19.0          # Specific version
 
 # List images
 docker images
 docker images | grep n8n
 
 # Remove image
-docker rmi n8n/n8n:latest
-docker rmi $(docker images -q n8n/n8n)  # Remove all n8n images
+docker rmi n8nio/n8n:latest
+docker rmi $(docker images -q n8nio/n8n)  # Remove all n8n images
 
 # Build custom image
 docker build -t my-n8n:1.0 .
 docker build -f Dockerfile.custom -t my-n8n .
 
 # Inspect image
-docker inspect n8n/n8n:latest
-docker history n8n/n8n:latest       # View layers
+docker inspect n8nio/n8n:latest
+docker history n8nio/n8n:latest       # View layers
 ```
 
 ---
@@ -49,7 +49,7 @@ docker history n8n/n8n:latest       # View layers
 
 ```bash
 # Run (create + start)
-docker run -d --name n8n n8n/n8n
+docker run -d --name n8n n8nio/n8n
 
 # Run with options
 docker run -d \
@@ -58,13 +58,13 @@ docker run -d \
   -p 5678:5678 \
   -e N8N_BASIC_AUTH_ACTIVE=true \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n:latest
+  n8nio/n8n:latest
 
 # Run with environment file
-docker run -d --name n8n --env-file .env n8n/n8n
+docker run -d --name n8n --env-file .env n8nio/n8n
 
 # Create without starting
-docker create --name n8n -p 5678:5678 n8n/n8n
+docker create --name n8n -p 5678:5678 n8nio/n8n
 ```
 
 ### Manage Containers
@@ -235,7 +235,7 @@ docker logs n8n
 docker inspect n8n | grep -A 10 State
 
 # Try running interactively
-docker run -it --rm n8n/n8n sh
+docker run -it --rm n8nio/n8n sh
 ```
 
 ### Network Issues
@@ -268,7 +268,7 @@ docker exec -u root n8n chown -R node:node /home/node/.n8n
 docker stats n8n
 
 # Limit resources
-docker run -d --name n8n --cpus="2.0" --memory="2g" n8n/n8n
+docker run -d --name n8n --cpus="2.0" --memory="2g" n8nio/n8n
 ```
 
 ---
@@ -282,7 +282,7 @@ docker run -d --name n8n \
   -e N8N_BASIC_AUTH_ACTIVE=true \
   -e N8N_BASIC_AUTH_USER=admin \
   -e N8N_BASIC_AUTH_PASSWORD=password \
-  n8n/n8n
+  n8nio/n8n
 
 # Run with PostgreSQL
 docker run -d --name n8n \
@@ -293,7 +293,7 @@ docker run -d --name n8n \
   -e DB_POSTGRESDB_USER=n8n \
   -e DB_POSTGRESDB_PASSWORD=password \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 
 # Check n8n version
 docker exec n8n n8n --version
@@ -338,7 +338,7 @@ docker run -d \
   -e DB_TYPE=postgresdb \
   -e DB_POSTGRESDB_HOST=postgres \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 ```
 
 ### Complete Cleanup
@@ -355,7 +355,7 @@ docker volume rm n8n-data postgres-data redis-data
 docker network rm n8n-network
 
 # Remove images
-docker rmi n8n/n8n postgres redis
+docker rmi n8nio/n8n postgres redis
 ```
 
 ### Backup Everything
@@ -413,7 +413,7 @@ docker export n8n > n8n-container.tar
 docker import n8n-container.tar my-n8n:backup
 
 # Save/Load images
-docker save n8n/n8n:latest > n8n-image.tar
+docker save n8nio/n8n:latest > n8n-image.tar
 docker load < n8n-image.tar
 ```
 

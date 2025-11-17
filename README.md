@@ -1,356 +1,356 @@
 # 🎓 Zero to Hero: n8n Engineer
 
-> De cero a experto en implementación y deployment de n8n
+> From zero to expert in n8n implementation and deployment
 
-## 🎯 ¿Qué vas a aprender?
+## 🎯 What Will You Learn?
 
-Este curso te enseña a **implementar, configurar y desplegar** n8n de manera profesional. NO es un curso de cómo usar n8n (eso es ZTH: n8n Developer), sino de cómo ser el **ingeniero** que lo instala y mantiene.
+This course teaches you how to **implement, configure, and deploy** n8n professionally. This is NOT a course on how to use n8n (that's ZTH: n8n Developer), but rather how to be the **engineer** who installs and maintains it.
 
-### Al finalizar sabrás:
+### By the end you'll know:
 
-✅ Qué es Docker y por qué es fundamental
-✅ Cómo funciona Docker Compose
-✅ La arquitectura interna de n8n
-✅ Por qué n8n necesita Redis y PostgreSQL
-✅ Configurar n8n en local para desarrollo
-✅ Desplegar n8n en producción (VPS)
-✅ Configurar SSL/HTTPS
-✅ Implementar CI/CD automático
-✅ Monitorear y mantener n8n en producción
-✅ Troubleshooting de problemas comunes
-✅ Backups y disaster recovery
+✅ What Docker is and why it's fundamental
+✅ How Docker Compose works
+✅ The internal architecture of n8n
+✅ Why n8n needs Redis and PostgreSQL
+✅ Configure n8n locally for development
+✅ Deploy n8n to production (VPS)
+✅ Configure SSL/HTTPS
+✅ Implement automatic CI/CD
+✅ Monitor and maintain n8n in production
+✅ Troubleshoot common problems
+✅ Backups and disaster recovery
 
 ---
 
-## 📚 Estructura del Curso
+## 📚 Course Structure
 
-### 🟢 Nivel Principiante (Foundations)
+### 🟢 Beginner Level (Foundations)
 
-**Lección 1: Fundamentos - ¿Qué es n8n?**
-- Qué es n8n y para qué sirve
-- Casos de uso reales
-- Arquitectura general
-- Diferencia entre usar vs implementar
-- 📖 Duración: 30 minutos
+**Lesson 1: Fundamentals - What is n8n?**
+- What n8n is and what it's used for
+- Real-world use cases
+- General architecture
+- Difference between using vs implementing
+- 📖 Duration: 30 minutes
 
-**Lección 2: Docker Desde Cero**
-- ¿Qué es un contenedor?
-- ¿Por qué Docker?
-- Imágenes vs Contenedores
-- Tu primer contenedor
-- 📖 Duración: 1 hora
-- 🧪 Práctica: Correr tu primer contenedor
+**Lesson 2: Docker From Scratch**
+- What is a container?
+- Why Docker?
+- Images vs Containers
+- Your first container
+- 📖 Duration: 1 hour
+- 🧪 Practice: Run your first container
 
-**Lección 3: Docker Compose**
-- El problema de múltiples contenedores
-- Sintaxis de docker-compose.yml
-- Redes y volúmenes
-- Comandos esenciales
-- 📖 Duración: 1 hora
-- 🧪 Práctica: Stack multi-contenedor
+**Lesson 3: Docker Compose**
+- The multi-container problem
+- docker-compose.yml syntax
+- Networks and volumes
+- Essential commands
+- 📖 Duration: 1 hour
+- 🧪 Practice: Multi-container stack
 
-**Lección 4: Variables de Entorno**
-- ¿Qué son y por qué existen?
-- Archivos .env
-- Secretos y seguridad
-- Local vs Producción
-- 📖 Duración: 30 minutos
-- 🧪 Práctica: Configurar .env
+**Lesson 4: Environment Variables**
+- What are they and why do they exist?
+- .env files
+- Secrets and security
+- Local vs Production
+- 📖 Duration: 30 minutes
+- 🧪 Practice: Configure .env
 
-### 🟡 Nivel Intermedio (Implementation)
+### 🟡 Intermediate Level (Implementation)
 
-**Lección 5: Arquitectura de n8n**
-- Componentes de n8n
-- El problema del threading
-- Queue Mode explicado
-- Diagrama completo
-- 📖 Duración: 1 hora
+**Lesson 5: n8n Architecture**
+- n8n components
+- The threading problem
+- Queue Mode explained
+- Complete diagram
+- 📖 Duration: 1 hour
 
-**Lección 6: PostgreSQL para n8n**
-- ¿Por qué una base de datos?
+**Lesson 6: PostgreSQL for n8n**
+- Why a database?
 - PostgreSQL vs SQLite vs MySQL
-- Configuración para n8n
-- Backups de PostgreSQL
-- 📖 Duración: 1 hora
-- 🧪 Práctica: Conectar n8n a PostgreSQL
+- Configuration for n8n
+- PostgreSQL backups
+- 📖 Duration: 1 hour
+- 🧪 Practice: Connect n8n to PostgreSQL
 
-**Lección 7: Redis y Queue Mode**
-- ¿Qué es Redis?
-- Colas de trabajos
-- Workers explicados
-- Escalado horizontal
-- 📖 Duración: 1 hora
-- 🧪 Práctica: Configurar Queue Mode
+**Lesson 7: Redis and Queue Mode**
+- What is Redis?
+- Job queues
+- Workers explained
+- Horizontal scaling
+- 📖 Duration: 1 hour
+- 🧪 Practice: Configure Queue Mode
 
-**Lección 8: Setup Local Completo**
-- Arquitectura local
+**Lesson 8: Complete Local Setup**
+- Local architecture
 - docker-compose.local.yml
-- Debugging y logs
-- Troubleshooting común
-- 📖 Duración: 2 horas
-- 🧪 Práctica: n8n funcionando en local
+- Debugging and logs
+- Common troubleshooting
+- 📖 Duration: 2 hours
+- 🧪 Practice: n8n running locally
 
-### 🔴 Nivel Avanzado (Production)
+### 🔴 Advanced Level (Production)
 
-**Lección 9: Preparación para Producción**
-- Diferencias local vs producción
-- Requisitos del servidor
-- Proveedores de VPS
-- Costos estimados
-- Checklist de seguridad
-- 📖 Duración: 1 hora
+**Lesson 9: Production Preparation**
+- Local vs production differences
+- Server requirements
+- VPS providers
+- Estimated costs
+- Security checklist
+- 📖 Duration: 1 hour
 
-**Lección 10: Deploy a Producción**
-- Configurar servidor (VPS)
+**Lesson 10: Production Deployment**
+- Configure server (VPS)
 - docker-compose.prod.yml
-- Configuración de seguridad
-- Primeros pasos en producción
-- 📖 Duración: 2 horas
-- 🧪 Práctica: n8n en producción
+- Security configuration
+- First steps in production
+- 📖 Duration: 2 hours
+- 🧪 Practice: n8n in production
 
-**Lección 11: Nginx y HTTPS**
-- ¿Qué es un reverse proxy?
-- Configurar Nginx
-- SSL con Let's Encrypt
-- Renovación automática
-- 📖 Duración: 1.5 horas
-- 🧪 Práctica: HTTPS funcionando
+**Lesson 11: Nginx and HTTPS**
+- What is a reverse proxy?
+- Configure Nginx
+- SSL with Let's Encrypt
+- Automatic renewal
+- 📖 Duration: 1.5 hours
+- 🧪 Practice: HTTPS working
 
-**Lección 12: CI/CD con GitHub Actions**
-- ¿Qué es CI/CD?
-- GitHub Actions explicado
-- Deploy automático
+**Lesson 12: CI/CD with GitHub Actions**
+- What is CI/CD?
+- GitHub Actions explained
+- Automatic deployment
 - Rollback strategies
-- 📖 Duración: 2 horas
-- 🧪 Práctica: Push to deploy
+- 📖 Duration: 2 hours
+- 🧪 Practice: Push to deploy
 
-### 🟣 Nivel Experto (Operations)
+### 🟣 Expert Level (Operations)
 
-**Lección 13: Monitoreo y Logs**
-- Logs de Docker
-- Monitoring con Docker stats
-- Alertas básicas
+**Lesson 13: Monitoring and Logs**
+- Docker logs
+- Monitoring with Docker stats
+- Basic alerts
 - Health checks
-- 📖 Duración: 1 hora
-- 🧪 Práctica: Dashboard de monitoreo
+- 📖 Duration: 1 hour
+- 🧪 Practice: Monitoring dashboard
 
-**Lección 14: Backups y Recuperación**
-- Estrategias de backup
-- Backups automáticos
+**Lesson 14: Backups and Recovery**
+- Backup strategies
+- Automatic backups
 - Disaster recovery
-- Testing de backups
-- 📖 Duración: 1.5 horas
-- 🧪 Práctica: Plan de backup
+- Backup testing
+- 📖 Duration: 1.5 hours
+- 🧪 Practice: Backup plan
 
-**Lección 15: Escalado y Performance**
-- Escalar workers
-- Optimización de PostgreSQL
+**Lesson 15: Scaling and Performance**
+- Scale workers
+- PostgreSQL optimization
 - Redis tuning
 - Load testing
-- 📖 Duración: 2 horas
-- 🧪 Práctica: Escalar n8n
+- 📖 Duration: 2 hours
+- 🧪 Practice: Scale n8n
 
-**Lección 16: Troubleshooting Avanzado**
-- Problemas comunes
-- Debugging profundo
-- Logs analysis
+**Lesson 16: Advanced Troubleshooting**
+- Common problems
+- Deep debugging
+- Log analysis
 - Performance issues
-- 📖 Duración: 1 hora
+- 📖 Duration: 1 hour
 
-### 🏆 Proyecto Final
+### 🏆 Final Project
 
-**Proyecto: Deploy Completo Profesional**
-- Setup desde cero
-- Producción con HTTPS
-- CI/CD configurado
-- Monitoring activo
-- Documentación completa
-- 📖 Duración: 4-6 horas
-
----
-
-## 🗺️ Roadmap de Aprendizaje
-
-### Path 1: Rápido (2-3 días intensivos)
-```
-Día 1: Lecciones 1-4 (Foundations)
-Día 2: Lecciones 5-8 (Implementation)
-Día 3: Lecciones 9-12 (Production)
-```
-
-### Path 2: Pausado (2 semanas, 1-2 horas/día)
-```
-Semana 1: Foundations + Implementation
-Semana 2: Production + Operations
-```
-
-### Path 3: Profundo (1 mes, práctica extensa)
-```
-Semana 1: Lecciones 1-4 + ejercicios
-Semana 2: Lecciones 5-8 + proyecto intermedio
-Semana 3: Lecciones 9-12 + deploy real
-Semana 4: Lecciones 13-16 + proyecto final
-```
+**Project: Complete Professional Deployment**
+- Setup from scratch
+- Production with HTTPS
+- Configured CI/CD
+- Active monitoring
+- Complete documentation
+- 📖 Duration: 4-6 hours
 
 ---
 
-## 📦 Requisitos Previos
+## 🗺️ Learning Roadmap
 
-### Conocimientos
-- [ ] Uso básico de terminal/línea de comandos
-- [ ] Conceptos básicos de redes (IP, puertos, DNS)
-- [ ] (Opcional) Experiencia con Linux
+### Path 1: Fast (2-3 intensive days)
+```
+Day 1: Lessons 1-4 (Foundations)
+Day 2: Lessons 5-8 (Implementation)
+Day 3: Lessons 9-12 (Production)
+```
 
-### Software Necesario
-- [ ] Docker Desktop instalado
-- [ ] Editor de código (VS Code recomendado)
-- [ ] Git instalado
+### Path 2: Paced (2 weeks, 1-2 hours/day)
+```
+Week 1: Foundations + Implementation
+Week 2: Production + Operations
+```
+
+### Path 3: Deep (1 month, extensive practice)
+```
+Week 1: Lessons 1-4 + exercises
+Week 2: Lessons 5-8 + intermediate project
+Week 3: Lessons 9-12 + real deployment
+Week 4: Lessons 13-16 + final project
+```
+
+---
+
+## 📦 Prerequisites
+
+### Knowledge
+- [ ] Basic terminal/command line usage
+- [ ] Basic networking concepts (IP, ports, DNS)
+- [ ] (Optional) Linux experience
+
+### Required Software
+- [ ] Docker Desktop installed
+- [ ] Code editor (VS Code recommended)
+- [ ] Git installed
 - [ ] Terminal (bash/zsh)
 
-### Recursos
-- [ ] Cuenta de GitHub
-- [ ] (Para producción) VPS o servidor
-- [ ] (Opcional) Dominio propio
+### Resources
+- [ ] GitHub account
+- [ ] (For production) VPS or server
+- [ ] (Optional) Own domain
 
 ---
 
-## 🎯 Cómo Usar Este Curso
+## 🎯 How to Use This Course
 
-### 1. Clonar el Repositorio
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/tu-usuario/ZTH-n8n-Engineer.git
+git clone https://github.com/your-user/ZTH-n8n-Engineer.git
 cd ZTH-n8n-Engineer
 ```
 
-### 2. Seguir las Lecciones en Orden
+### 2. Follow Lessons in Order
 ```bash
 cd lessons/01-foundations
-# Leer README.md
-# Hacer ejercicios prácticos
+# Read README.md
+# Do practical exercises
 ```
 
-### 3. Hacer los Ejercicios
-Cada lección tiene una carpeta `practica/` con ejercicios.
+### 3. Do the Exercises
+Each lesson has a `practice/` folder with exercises.
 
-### 4. Proyecto Final
-Al terminar todas las lecciones, completa el proyecto final.
+### 4. Final Project
+After completing all lessons, complete the final project.
 
 ---
 
-## 📂 Estructura del Repositorio
+## 📂 Repository Structure
 
 ```
 ZTH-n8n-Engineer/
-├── README.md                    # Este archivo
-├── lessons/                     # Todas las lecciones
+├── README.md                    # This file
+├── lessons/                     # All lessons
 │   ├── 01-foundations/
-│   │   ├── README.md           # Teoría de la lección
-│   │   ├── practica/           # Ejercicios prácticos
-│   │   └── recursos/           # Archivos adicionales
+│   │   ├── README.md           # Lesson theory
+│   │   ├── practice/           # Practical exercises
+│   │   └── resources/          # Additional files
 │   ├── 02-docker-basics/
 │   ├── 03-docker-compose/
 │   └── ...
-├── resources/                   # Recursos compartidos
-│   ├── diagrams/               # Diagramas y gráficos
-│   ├── scripts/                # Scripts útiles
-│   ├── templates/              # Plantillas reutilizables
-│   └── cheatsheets/            # Hojas de referencia rápida
-├── projects/                    # Proyectos prácticos
-│   ├── final-project/          # Proyecto final del curso
-│   └── mini-projects/          # Mini proyectos por módulo
-└── solutions/                   # Soluciones a ejercicios
-    └── (ocultas hasta que termines)
+├── resources/                   # Shared resources
+│   ├── diagrams/               # Diagrams and graphics
+│   ├── scripts/                # Useful scripts
+│   ├── templates/              # Reusable templates
+│   └── cheatsheets/            # Quick reference sheets
+├── projects/                    # Practical projects
+│   ├── final-project/          # Course final project
+│   └── mini-projects/          # Mini projects per module
+└── solutions/                   # Solutions to exercises
+    └── (hidden until you finish)
 ```
 
 ---
 
-## 🎓 Metodología de Enseñanza
+## 🎓 Teaching Methodology
 
-Cada lección sigue esta estructura:
+Each lesson follows this structure:
 
-### 1. 🎯 Objetivos
-Lo que aprenderás en esta lección.
+### 1. 🎯 Objectives
+What you'll learn in this lesson.
 
-### 2. 📖 Teoría
-Conceptos explicados con:
-- Analogías del mundo real
-- Diagramas visuales
-- Ejemplos prácticos
-- Comparaciones antes/después
+### 2. 📖 Theory
+Concepts explained with:
+- Real-world analogies
+- Visual diagrams
+- Practical examples
+- Before/after comparisons
 
-### 3. 🧪 Práctica Guiada
-Ejercicios paso a paso donde:
-- Explico QUÉ estás haciendo
-- Explico POR QUÉ lo estás haciendo
-- Muestro el resultado esperado
+### 3. 🧪 Guided Practice
+Step-by-step exercises where:
+- I explain WHAT you're doing
+- I explain WHY you're doing it
+- I show the expected result
 
-### 4. 💪 Ejercicios Independientes
-Desafíos para que practiques solo.
+### 4. 💪 Independent Exercises
+Challenges for you to practice on your own.
 
 ### 5. ✅ Checklist
-Verificas que entendiste todo antes de continuar.
+Verify you understood everything before continuing.
 
-### 6. 🔗 Recursos Adicionales
-Links, videos, documentación para profundizar.
-
----
-
-## 🏅 Certificación (Informal)
-
-Al completar el curso y el proyecto final:
-1. Tendrás un portafolio en GitHub
-2. n8n funcionando en producción
-3. Conocimientos demostrables
-4. Puedes agregar a tu CV: "n8n Infrastructure Engineer"
+### 6. 🔗 Additional Resources
+Links, videos, documentation to go deeper.
 
 ---
 
-## 🤝 Contribuciones
+## 🏅 Certification (Informal)
 
-Este es un curso abierto. Si encuentras:
-- Errores
-- Mejoras
-- Temas adicionales
-
-¡Abre un issue o PR!
-
----
-
-## 📞 Soporte
-
-- **Issues**: Para bugs o dudas técnicas
-- **Discussions**: Para preguntas generales
-- **Discord**: [Link a comunidad] (próximamente)
+Upon completing the course and final project:
+1. You'll have a portfolio on GitHub
+2. n8n running in production
+3. Demonstrable knowledge
+4. You can add to your CV: "n8n Infrastructure Engineer"
 
 ---
 
-## 📄 Licencia
+## 🤝 Contributions
 
-MIT License - Úsalo, modifícalo, compártelo.
+This is an open course. If you find:
+- Errors
+- Improvements
+- Additional topics
+
+Open an issue or PR!
 
 ---
 
-## 🚀 ¡Empecemos!
+## 📞 Support
+
+- **Issues**: For bugs or technical questions
+- **Discussions**: For general questions
+- **Discord**: [Community link] (coming soon)
+
+---
+
+## 📄 License
+
+MIT License - Use it, modify it, share it.
+
+---
+
+## 🚀 Let's Get Started!
 
 ```bash
-# Siguiente paso:
+# Next step:
 cd lessons/01-foundations
 cat README.md
 ```
 
-**¡Nos vemos en la lección 1!** 🎉
+**See you in lesson 1!** 🎉
 
 ---
 
-## 🗺️ Cursos Relacionados
+## 🗺️ Related Courses
 
-- **ZTH: n8n Developer** (próximamente) - Cómo USAR n8n para crear automatizaciones
-- **ZTH: n8n Advanced** (próximamente) - Custom nodes, integraciones avanzadas
-- **ZTH: Docker Mastery** - Profundiza en Docker y Kubernetes
+- **ZTH: n8n Developer** (coming soon) - How to USE n8n to create automations
+- **ZTH: n8n Advanced** (coming soon) - Custom nodes, advanced integrations
+- **ZTH: Docker Mastery** - Deep dive into Docker and Kubernetes
 
 ---
 
-**Creado con ❤️ para la comunidad de n8n**
+**Created with ❤️ for the n8n community**
 
-_Última actualización: Noviembre 2024_
+_Last updated: November 2024_
 

@@ -84,7 +84,7 @@ docker run -d \
   -e N8N_BASIC_AUTH_PASSWORD=admin_secure_password \
   -e GENERIC_TIMEZONE=America/New_York \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n:latest
+  n8nio/n8n:latest
 ```
 
 ### Step 5: Access n8n

@@ -1,398 +1,398 @@
-# 📚 Índice de Lecciones - ZTH: n8n Engineer
+# 📚 Lessons Index - ZTH: n8n Engineer
 
-## 🎯 Cómo Navegar las Lecciones
+## 🎯 How to Navigate the Lessons
 
-1. **Lee el README.md de cada lección** - Contiene toda la teoría
-2. **Haz los ejercicios en `/practica`** - Aprendizaje hands-on
-3. **Consulta `/recursos`** - Material adicional y referencias
-4. **Completa el checklist** al final de cada lección
-5. **No saltes lecciones** - Cada una se construye sobre la anterior
-
----
-
-## 🟢 NIVEL PRINCIPIANTE: Foundations
-
-### [Lección 1: Fundamentos - ¿Qué es n8n?](./01-foundations)
-**Duración:** 30 minutos | **Dificultad:** ⭐
-
-📖 **Aprenderás:**
-- Qué es n8n y para qué sirve
-- Casos de uso reales
-- Diferencia entre "usar" vs "implementar" n8n
-- Arquitectura general a alto nivel
-
-🧪 **Práctica:**
-- Explorar n8n.io y casos de uso
-- Identificar escenarios de automatización
-
-🎯 **Objetivo:** Entender QUÉ vas a aprender a implementar
+1. **Read the README.md of each lesson** - Contains all the theory
+2. **Do the exercises in `/practice`** - Hands-on learning
+3. **Check `/resources`** - Additional material and references
+4. **Complete the checklist** at the end of each lesson
+5. **Don't skip lessons** - Each one builds upon the previous one
 
 ---
 
-### [Lección 2: Docker Desde Cero](./02-docker-basics)
-**Duración:** 1 hora | **Dificultad:** ⭐⭐
+## 🟢 BEGINNER LEVEL: Foundations
 
-📖 **Aprenderás:**
-- ¿Qué es un contenedor? (con analogías)
-- ¿Por qué Docker resuelve "funciona en mi máquina"?
-- Imágenes vs Contenedores
-- Comandos esenciales de Docker
-- Volúmenes y persistencia
+### [Lesson 1: Fundamentals - What is n8n?](./01-foundations)
+**Duration:** 30 minutes | **Difficulty:** ⭐
 
-🧪 **Práctica:**
-- Instalar Docker Desktop
-- Correr tu primer contenedor
-- Explorar contenedores activos
-- Crear un contenedor con volumen
+📖 **You will learn:**
+- What n8n is and what it's used for
+- Real-world use cases
+- Difference between "using" vs "implementing" n8n
+- High-level general architecture
 
-🎯 **Objetivo:** Dominar conceptos básicos de Docker
+🧪 **Practice:**
+- Explore n8n.io and use cases
+- Identify automation scenarios
 
----
-
-### [Lección 3: Docker Compose](./03-docker-compose)
-**Duración:** 1 hora | **Dificultad:** ⭐⭐
-
-📖 **Aprenderás:**
-- El problema de múltiples contenedores
-- Sintaxis de docker-compose.yml
-- Servicios, redes y volúmenes
-- Comandos de Docker Compose
-- depends_on y orden de inicio
-
-🧪 **Práctica:**
-- Crear tu primer docker-compose.yml
-- Stack multi-contenedor (nginx + app)
-- Conectar contenedores entre sí
-
-🎯 **Objetivo:** Orquestar múltiples contenedores
+🎯 **Goal:** Understand WHAT you're going to learn to implement
 
 ---
 
-### [Lección 4: Variables de Entorno](./04-variables-entorno)
-**Duración:** 30 minutos | **Dificultad:** ⭐
+### [Lesson 2: Docker From Scratch](./02-docker-basics)
+**Duration:** 1 hour | **Difficulty:** ⭐⭐
 
-📖 **Aprenderás:**
-- ¿Qué son las variables de entorno?
-- Archivos .env y .env.example
-- Secretos y seguridad
-- Local vs Producción
-- .gitignore y seguridad
+📖 **You will learn:**
+- What is a container? (with analogies)
+- Why Docker solves "it works on my machine"?
+- Images vs Containers
+- Essential Docker commands
+- Volumes and persistence
 
-🧪 **Práctica:**
-- Crear archivo .env
-- Usar variables en docker-compose
-- Separar configuración local/prod
+🧪 **Practice:**
+- Install Docker Desktop
+- Run your first container
+- Explore active containers
+- Create a container with volume
 
-🎯 **Objetivo:** Configurar aplicaciones de forma segura
+🎯 **Goal:** Master basic Docker concepts
 
 ---
 
-## 🟡 NIVEL INTERMEDIO: Implementation
+### [Lesson 3: Docker Compose](./03-docker-compose)
+**Duration:** 1 hour | **Difficulty:** ⭐⭐
 
-### [Lección 5: Arquitectura de n8n](./05-arquitectura-n8n)
-**Duración:** 1 hora | **Dificultad:** ⭐⭐
+📖 **You will learn:**
+- The multi-container problem
+- docker-compose.yml syntax
+- Services, networks and volumes
+- Docker Compose commands
+- depends_on and startup order
 
-📖 **Aprenderás:**
-- Componentes de n8n (Web + Workers)
-- El problema del threading explicado
+🧪 **Practice:**
+- Create your first docker-compose.yml
+- Multi-container stack (nginx + app)
+- Connect containers to each other
+
+🎯 **Goal:** Orchestrate multiple containers
+
+---
+
+### [Lesson 4: Environment Variables](./04-variables-entorno)
+**Duration:** 30 minutes | **Difficulty:** ⭐
+
+📖 **You will learn:**
+- What are environment variables?
+- .env and .env.example files
+- Secrets and security
+- Local vs Production
+- .gitignore and security
+
+🧪 **Practice:**
+- Create .env file
+- Use variables in docker-compose
+- Separate local/prod configuration
+
+🎯 **Goal:** Configure applications securely
+
+---
+
+## 🟡 INTERMEDIATE LEVEL: Implementation
+
+### [Lesson 5: n8n Architecture](./05-arquitectura-n8n)
+**Duration:** 1 hour | **Difficulty:** ⭐⭐
+
+📖 **You will learn:**
+- n8n components (Web + Workers)
+- The threading problem explained
 - Queue Mode vs Main Mode
-- Por qué Redis es necesario
-- Diagrama de arquitectura completo
+- Why Redis is necessary
+- Complete architecture diagram
 
-🧪 **Práctica:**
-- Analizar diagramas de arquitectura
-- Comparar Main Mode vs Queue Mode
-- Identificar cuellos de botella
+🧪 **Practice:**
+- Analyze architecture diagrams
+- Compare Main Mode vs Queue Mode
+- Identify bottlenecks
 
-🎯 **Objetivo:** Entender cómo funciona n8n internamente
+🎯 **Goal:** Understand how n8n works internally
 
 ---
 
-### [Lección 6: PostgreSQL para n8n](./06-postgresql)
-**Duración:** 1 hora | **Dificultad:** ⭐⭐
+### [Lesson 6: PostgreSQL for n8n](./06-postgresql)
+**Duration:** 1 hour | **Difficulty:** ⭐⭐
 
-📖 **Aprenderás:**
-- ¿Por qué n8n necesita una base de datos?
+📖 **You will learn:**
+- Why does n8n need a database?
 - PostgreSQL vs SQLite vs MySQL
-- Configuración de PostgreSQL para n8n
-- Conexión y verificación
-- Backups básicos de PostgreSQL
+- PostgreSQL configuration for n8n
+- Connection and verification
+- Basic PostgreSQL backups
 
-🧪 **Práctica:**
-- Levantar PostgreSQL con Docker
-- Conectar a PostgreSQL con CLI
-- Ver tablas de n8n
-- Hacer un backup manual
+🧪 **Practice:**
+- Launch PostgreSQL with Docker
+- Connect to PostgreSQL with CLI
+- View n8n tables
+- Perform manual backup
 
-🎯 **Objetivo:** Configurar y gestionar PostgreSQL
-
----
-
-### [Lección 7: Redis y Queue Mode](./07-redis-queue)
-**Duración:** 1 hora | **Dificultad:** ⭐⭐⭐
-
-📖 **Aprenderás:**
-- ¿Qué es Redis y por qué es rápido?
-- Colas de trabajos explicadas
-- Workers y paralelismo
-- Escalado horizontal de workers
-- Monitoreo de colas
-
-🧪 **Práctica:**
-- Levantar Redis con Docker
-- Conectar a Redis con redis-cli
-- Ver colas de n8n
-- Simular carga de trabajo
-
-🎯 **Objetivo:** Dominar Queue Mode con Redis
+🎯 **Goal:** Configure and manage PostgreSQL
 
 ---
 
-### [Lección 8: Setup Local Completo](./08-setup-local)
-**Duración:** 2 horas | **Dificultad:** ⭐⭐⭐
+### [Lesson 7: Redis and Queue Mode](./07-redis-queue)
+**Duration:** 1 hour | **Difficulty:** ⭐⭐⭐
 
-📖 **Aprenderás:**
-- Arquitectura local completa
-- docker-compose.local.yml explicado
-- Debugging y logs efectivos
-- Troubleshooting común
-- Workflow de desarrollo
+📖 **You will learn:**
+- What is Redis and why is it fast?
+- Job queues explained
+- Workers and parallelism
+- Horizontal scaling of workers
+- Queue monitoring
 
-🧪 **Práctica:**
-- Configurar n8n completo en local
-- Crear y ejecutar workflows
-- Debugging de problemas
-- Exportar/importar workflows
+🧪 **Practice:**
+- Launch Redis with Docker
+- Connect to Redis with redis-cli
+- View n8n queues
+- Simulate workload
 
-🎯 **Objetivo:** n8n funcionando 100% en local
-
----
-
-## 🔴 NIVEL AVANZADO: Production
-
-### [Lección 9: Preparación para Producción](./09-preparacion-prod)
-**Duración:** 1 hora | **Dificultad:** ⭐⭐
-
-📖 **Aprenderás:**
-- Diferencias críticas local vs producción
-- Requisitos del servidor (VPS)
-- Proveedores recomendados
-- Estimación de costos
-- Checklist de seguridad
-
-🧪 **Práctica:**
-- Comparar proveedores de VPS
-- Calcular recursos necesarios
-- Revisar checklist de seguridad
-
-🎯 **Objetivo:** Planificar deploy a producción
+🎯 **Goal:** Master Queue Mode with Redis
 
 ---
 
-### [Lección 10: Deploy a Producción](./10-deploy-produccion)
-**Duración:** 2 horas | **Dificultad:** ⭐⭐⭐
+### [Lesson 8: Complete Local Setup](./08-setup-local)
+**Duration:** 2 hours | **Difficulty:** ⭐⭐⭐
 
-📖 **Aprenderás:**
-- Configurar servidor (VPS) desde cero
-- docker-compose.prod.yml explicado
-- Configuración de seguridad
-- Firewall y puertos
-- Primeros pasos en producción
+📖 **You will learn:**
+- Complete local architecture
+- docker-compose.local.yml explained
+- Effective debugging and logs
+- Common troubleshooting
+- Development workflow
 
-🧪 **Práctica:**
-- Configurar un VPS
-- Instalar Docker en servidor
-- Desplegar n8n en producción
-- Verificar que funciona
+🧪 **Practice:**
+- Configure complete n8n locally
+- Create and execute workflows
+- Debug problems
+- Export/import workflows
 
-🎯 **Objetivo:** n8n corriendo en producción
-
----
-
-### [Lección 11: Nginx y HTTPS](./11-nginx-https)
-**Duración:** 1.5 horas | **Dificultad:** ⭐⭐⭐
-
-📖 **Aprenderás:**
-- ¿Qué es un reverse proxy?
-- Configurar Nginx para n8n
-- SSL/TLS con Let's Encrypt
-- Renovación automática de certificados
-- Configuración de seguridad
-
-🧪 **Práctica:**
-- Configurar Nginx
-- Obtener certificado SSL
-- HTTPS funcionando
-- Redirección HTTP → HTTPS
-
-🎯 **Objetivo:** n8n accesible por HTTPS
+🎯 **Goal:** n8n running 100% locally
 
 ---
 
-### [Lección 12: CI/CD con GitHub Actions](./12-cicd)
-**Duración:** 2 horas | **Dificultad:** ⭐⭐⭐
+## 🔴 ADVANCED LEVEL: Production
 
-📖 **Aprenderás:**
-- ¿Qué es CI/CD y por qué usarlo?
-- GitHub Actions explicado
-- Workflows de deploy
-- SSH keys y seguridad
-- Estrategias de rollback
+### [Lesson 9: Production Preparation](./09-preparacion-prod)
+**Duration:** 1 hour | **Difficulty:** ⭐⭐
 
-🧪 **Práctica:**
-- Configurar GitHub Actions
-- Push to deploy automático
-- Testing de deploys
-- Simular rollback
+📖 **You will learn:**
+- Critical differences local vs production
+- Server requirements (VPS)
+- Recommended providers
+- Cost estimation
+- Security checklist
 
-🎯 **Objetivo:** Deploy automático con git push
+🧪 **Practice:**
+- Compare VPS providers
+- Calculate necessary resources
+- Review security checklist
 
----
-
-## 🟣 NIVEL EXPERTO: Operations
-
-### [Lección 13: Monitoreo y Logs](./13-monitoreo)
-**Duración:** 1 hora | **Dificultad:** ⭐⭐⭐
-
-📖 **Aprenderás:**
-- Logs de Docker
-- docker stats y monitoring
-- Health checks avanzados
-- Alertas básicas
-- Debugging en producción
-
-🧪 **Práctica:**
-- Configurar health checks
-- Crear dashboard de monitoreo
-- Simular y detectar problemas
-
-🎯 **Objetivo:** Monitorear n8n en producción
+🎯 **Goal:** Plan production deployment
 
 ---
 
-### [Lección 14: Backups y Recuperación](./14-backups)
-**Duración:** 1.5 horas | **Dificultad:** ⭐⭐⭐
+### [Lesson 10: Production Deployment](./10-deploy-produccion)
+**Duration:** 2 hours | **Difficulty:** ⭐⭐⭐
 
-📖 **Aprenderás:**
-- Estrategias de backup (3-2-1)
-- Backups automáticos de PostgreSQL
+📖 **You will learn:**
+- Configure server (VPS) from scratch
+- docker-compose.prod.yml explained
+- Security configuration
+- Firewall and ports
+- First steps in production
+
+🧪 **Practice:**
+- Configure a VPS
+- Install Docker on server
+- Deploy n8n to production
+- Verify it works
+
+🎯 **Goal:** n8n running in production
+
+---
+
+### [Lesson 11: Nginx and HTTPS](./11-nginx-https)
+**Duration:** 1.5 hours | **Difficulty:** ⭐⭐⭐
+
+📖 **You will learn:**
+- What is a reverse proxy?
+- Configure Nginx for n8n
+- SSL/TLS with Let's Encrypt
+- Automatic certificate renewal
+- Security configuration
+
+🧪 **Practice:**
+- Configure Nginx
+- Obtain SSL certificate
+- HTTPS working
+- HTTP → HTTPS redirection
+
+🎯 **Goal:** n8n accessible via HTTPS
+
+---
+
+### [Lesson 12: CI/CD with GitHub Actions](./12-cicd)
+**Duration:** 2 hours | **Difficulty:** ⭐⭐⭐
+
+📖 **You will learn:**
+- What is CI/CD and why use it?
+- GitHub Actions explained
+- Deployment workflows
+- SSH keys and security
+- Rollback strategies
+
+🧪 **Practice:**
+- Configure GitHub Actions
+- Automatic push to deploy
+- Testing deployments
+- Simulate rollback
+
+🎯 **Goal:** Automatic deployment with git push
+
+---
+
+## 🟣 EXPERT LEVEL: Operations
+
+### [Lesson 13: Monitoring and Logs](./13-monitoreo)
+**Duration:** 1 hour | **Difficulty:** ⭐⭐⭐
+
+📖 **You will learn:**
+- Docker logs
+- docker stats and monitoring
+- Advanced health checks
+- Basic alerts
+- Production debugging
+
+🧪 **Practice:**
+- Configure health checks
+- Create monitoring dashboard
+- Simulate and detect problems
+
+🎯 **Goal:** Monitor n8n in production
+
+---
+
+### [Lesson 14: Backups and Recovery](./14-backups)
+**Duration:** 1.5 hours | **Difficulty:** ⭐⭐⭐
+
+📖 **You will learn:**
+- Backup strategies (3-2-1)
+- Automatic PostgreSQL backups
 - Disaster recovery planning
-- Testing de backups
-- Retención de backups
+- Backup testing
+- Backup retention
 
-🧪 **Práctica:**
-- Configurar backups automáticos
-- Simular pérdida de datos
-- Recuperar desde backup
-- Documentar proceso
+🧪 **Practice:**
+- Configure automatic backups
+- Simulate data loss
+- Recover from backup
+- Document process
 
-🎯 **Objetivo:** Sistema robusto de backups
+🎯 **Goal:** Robust backup system
 
 ---
 
-### [Lección 15: Escalado y Performance](./15-escalado)
-**Duración:** 2 horas | **Dificultad:** ⭐⭐⭐⭐
+### [Lesson 15: Scaling and Performance](./15-escalado)
+**Duration:** 2 hours | **Difficulty:** ⭐⭐⭐⭐
 
-📖 **Aprenderás:**
-- Escalar workers horizontalmente
-- Optimización de PostgreSQL
+📖 **You will learn:**
+- Scale workers horizontally
+- PostgreSQL optimization
 - Redis tuning
 - Load testing
-- Identificar cuellos de botella
+- Identify bottlenecks
 
-🧪 **Práctica:**
-- Escalar a 5+ workers
-- Load testing con herramientas
-- Optimizar configuración
-- Medir mejoras
+🧪 **Practice:**
+- Scale to 5+ workers
+- Load testing with tools
+- Optimize configuration
+- Measure improvements
 
-🎯 **Objetivo:** n8n optimizado y escalado
+🎯 **Goal:** Optimized and scaled n8n
 
 ---
 
-### [Lección 16: Troubleshooting Avanzado](./16-troubleshooting)
-**Duración:** 1 hora | **Dificultad:** ⭐⭐⭐
+### [Lesson 16: Advanced Troubleshooting](./16-troubleshooting)
+**Duration:** 1 hour | **Difficulty:** ⭐⭐⭐
 
-📖 **Aprenderás:**
-- Problemas comunes y soluciones
-- Debugging profundo
-- Análisis de logs
+📖 **You will learn:**
+- Common problems and solutions
+- Deep debugging
+- Log analysis
 - Performance issues
-- Recovery de situaciones críticas
+- Recovery from critical situations
 
-🧪 **Práctica:**
-- Casos de troubleshooting reales
-- Debugging en vivo
-- Crear runbook de problemas
+🧪 **Practice:**
+- Real troubleshooting cases
+- Live debugging
+- Create problem runbook
 
-🎯 **Objetivo:** Resolver cualquier problema
+🎯 **Goal:** Solve any problem
 
 ---
 
-## 🏆 PROYECTO FINAL
+## 🏆 FINAL PROJECT
 
-### [Proyecto: Deploy Profesional Completo](../projects/final-project)
-**Duración:** 4-6 horas | **Dificultad:** ⭐⭐⭐⭐
+### [Project: Complete Professional Deployment](../projects/final-project)
+**Duration:** 4-6 hours | **Difficulty:** ⭐⭐⭐⭐
 
-🎯 **Objetivo:**
-Desplegar n8n de manera 100% profesional desde cero.
+🎯 **Goal:**
+Deploy n8n in a 100% professional manner from scratch.
 
-**Incluye:**
-- Setup desde cero en VPS
+**Includes:**
+- Setup from scratch on VPS
 - PostgreSQL + Redis
-- Queue Mode con 3 workers
-- HTTPS con certificado válido
-- CI/CD automático
-- Backups automáticos
-- Monitoreo básico
-- Documentación completa
+- Queue Mode with 3 workers
+- HTTPS with valid certificate
+- Automatic CI/CD
+- Automatic backups
+- Basic monitoring
+- Complete documentation
 
-**Entregables:**
-- Repositorio en GitHub
-- n8n funcionando en producción
-- Documentación del proceso
-- Runbook de operaciones
-
----
-
-## 📊 Progreso Recomendado
-
-### Semana 1: Foundations
-- [ ] Lección 1: Fundamentos
-- [ ] Lección 2: Docker Basics
-- [ ] Lección 3: Docker Compose
-- [ ] Lección 4: Variables de Entorno
-
-### Semana 2: Implementation
-- [ ] Lección 5: Arquitectura n8n
-- [ ] Lección 6: PostgreSQL
-- [ ] Lección 7: Redis y Queue
-- [ ] Lección 8: Setup Local
-
-### Semana 3: Production
-- [ ] Lección 9: Preparación
-- [ ] Lección 10: Deploy Producción
-- [ ] Lección 11: Nginx y HTTPS
-- [ ] Lección 12: CI/CD
-
-### Semana 4: Operations & Proyecto
-- [ ] Lección 13: Monitoreo
-- [ ] Lección 14: Backups
-- [ ] Lección 15: Escalado
-- [ ] Lección 16: Troubleshooting
-- [ ] Proyecto Final
+**Deliverables:**
+- GitHub repository
+- n8n running in production
+- Process documentation
+- Operations runbook
 
 ---
 
-## 🎓 Certificación
+## 📊 Recommended Progress
 
-Al completar todas las lecciones y el proyecto final:
-- ✅ Conocimientos demostrables de n8n
-- ✅ Portafolio en GitHub
-- ✅ n8n en producción funcionando
-- ✅ Habilidades de DevOps aplicadas
+### Week 1: Foundations
+- [ ] Lesson 1: Fundamentals
+- [ ] Lesson 2: Docker Basics
+- [ ] Lesson 3: Docker Compose
+- [ ] Lesson 4: Environment Variables
+
+### Week 2: Implementation
+- [ ] Lesson 5: n8n Architecture
+- [ ] Lesson 6: PostgreSQL
+- [ ] Lesson 7: Redis and Queue
+- [ ] Lesson 8: Local Setup
+
+### Week 3: Production
+- [ ] Lesson 9: Preparation
+- [ ] Lesson 10: Production Deployment
+- [ ] Lesson 11: Nginx and HTTPS
+- [ ] Lesson 12: CI/CD
+
+### Week 4: Operations & Project
+- [ ] Lesson 13: Monitoring
+- [ ] Lesson 14: Backups
+- [ ] Lesson 15: Scaling
+- [ ] Lesson 16: Troubleshooting
+- [ ] Final Project
 
 ---
 
-**¡Empieza por la [Lección 1: Fundamentos](./01-foundations)!**
+## 🎓 Certification
+
+Upon completing all lessons and the final project:
+- ✅ Demonstrable knowledge of n8n
+- ✅ GitHub portfolio
+- ✅ n8n running in production
+- ✅ Applied DevOps skills
+
+---
+
+**Start with [Lesson 1: Fundamentals](./01-foundations)!**
 

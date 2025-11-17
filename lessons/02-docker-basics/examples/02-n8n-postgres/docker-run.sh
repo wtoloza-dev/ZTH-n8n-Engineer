@@ -126,7 +126,7 @@ docker run -d \
   -e N8N_BASIC_AUTH_PASSWORD=${N8N_PASSWORD} \
   -e GENERIC_TIMEZONE=America/New_York \
   -v ${N8N_VOLUME}:/home/node/.n8n \
-  n8n/n8n:latest
+  n8nio/n8n:latest
 
 echo -e "${GREEN}✓ n8n started${NC}"
 

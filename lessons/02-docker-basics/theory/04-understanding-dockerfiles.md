@@ -329,7 +329,7 @@ npm-debug.log
 
 ```dockerfile
 # Use official n8n image as base
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 # Switch to root to install custom packages
 USER root
@@ -410,16 +410,16 @@ graph LR
 ### Pattern 1: Basic n8n Extension
 
 ```dockerfile
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 USER root
-RUN npm install -g @n8n/n8n-nodes-langchain
+RUN npm install -g @n8nio/n8n-nodes-langchain
 USER node
 ```
 
 ### Pattern 2: n8n with System Dependencies
 
 ```dockerfile
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 USER root
 RUN apk add --no-cache \
     chromium \
@@ -433,7 +433,7 @@ USER node
 ### Pattern 3: n8n with Custom Configuration
 
 ```dockerfile
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 COPY --chown=node:node custom-nodes/ /home/node/.n8n/custom/
 ENV N8N_CUSTOM_EXTENSIONS="/home/node/.n8n/custom"
 ```

@@ -41,7 +41,7 @@ docker run -d \
   -e N8N_BASIC_AUTH_PASSWORD=change_this_password \
   -e GENERIC_TIMEZONE=America/New_York \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n:latest
+  n8nio/n8n:latest
 
 # Access n8n at http://localhost:5678
 # Login: admin / change_this_password
@@ -101,7 +101,7 @@ docker run -d \
   --name n8n \
   -p 8080:5678 \  # Access at http://localhost:8080
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n:latest
+  n8nio/n8n:latest
 ```
 
 ---
@@ -243,7 +243,7 @@ docker logs n8n
 # - Corrupted database
 
 # Solution: Use different port
-docker run -d --name n8n -p 8080:5678 -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -d --name n8n -p 8080:5678 -v n8n-data:/home/node/.n8n n8nio/n8n
 ```
 
 ### Can't Access Web Interface
@@ -283,7 +283,7 @@ docker stop n8n
 docker rm n8n
 
 # Pull new version
-docker pull n8n/n8n:latest
+docker pull n8nio/n8n:latest
 
 # Run with same volume (data preserved)
 docker run -d \
@@ -291,7 +291,7 @@ docker run -d \
   --restart unless-stopped \
   -p 5678:5678 \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n:latest
+  n8nio/n8n:latest
 
 # Check logs
 docker logs -f n8n
@@ -299,8 +299,8 @@ docker logs -f n8n
 
 **Version-specific upgrade:**
 ```bash
-docker pull n8n/n8n:1.19.0
-docker run -d --name n8n -p 5678:5678 -v n8n-data:/home/node/.n8n n8n/n8n:1.19.0
+docker pull n8nio/n8n:1.19.0
+docker run -d --name n8n -p 5678:5678 -v n8n-data:/home/node/.n8n n8nio/n8n:1.19.0
 ```
 
 ---

@@ -46,7 +46,7 @@
 
 ```dockerfile
 # Start from official n8n image
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 # Switch to root for installations
 USER root
@@ -83,7 +83,7 @@ Some n8n nodes require Python (e.g., certain data processing nodes).
 **`Dockerfile.python`:**
 
 ```dockerfile
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 USER root
 
@@ -135,7 +135,7 @@ For web scraping or browser automation nodes.
 **`Dockerfile.chromium`:**
 
 ```dockerfile
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 USER root
 
@@ -180,7 +180,7 @@ docker run -d \
 ### Popular Community Nodes
 
 ```dockerfile
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 USER root
 
@@ -191,7 +191,7 @@ WORKDIR /usr/local/lib/node_modules/n8n
 RUN npm install \
     n8n-nodes-text-manipulation \
     n8n-nodes-document-generator \
-    @n8n/n8n-nodes-langchain
+    @n8nio/n8n-nodes-langchain
 
 # Fix ownership
 RUN chown -R node:node /usr/local/lib/node_modules/n8n
@@ -224,7 +224,7 @@ Search on npm: https://www.npmjs.com/search?q=n8n-nodes
 ### Dockerfile for Custom Nodes
 
 ```dockerfile
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 USER root
 
@@ -256,7 +256,7 @@ ENV N8N_CUSTOM_EXTENSIONS="/home/node/.n8n/custom"
 
 ```dockerfile
 # Production-ready n8n with custom nodes and dependencies
-FROM n8n/n8n:1.19.0
+FROM n8nio/n8n:1.19.0
 
 # Metadata
 LABEL maintainer="your-email@company.com"
@@ -286,7 +286,7 @@ RUN pip3 install --no-cache-dir \
 WORKDIR /usr/local/lib/node_modules/n8n
 RUN npm install --save \
     n8n-nodes-text-manipulation \
-    @n8n/n8n-nodes-langchain \
+    @n8nio/n8n-nodes-langchain \
     && npm cache clean --force
 
 # Create custom directories
@@ -384,7 +384,7 @@ COPY package*.json ./
 RUN npm ci --only=production
 
 # Stage 2: Runtime
-FROM n8n/n8n:latest
+FROM n8nio/n8n:latest
 
 USER root
 
@@ -432,7 +432,7 @@ docker stop n8n-test
 docker images | grep n8n
 
 # Example output:
-# n8n/n8n                latest    200 MB
+# n8nio/n8n                latest    200 MB
 # n8n-python             1.0       280 MB  (+80 MB)
 # n8n-chromium           1.0       450 MB  (+250 MB)
 # n8n-custom-optimized   1.0       220 MB  (+20 MB)
@@ -469,8 +469,8 @@ ls -la /home/node/.n8n/custom
 
 1. **Pin Versions:**
    ```dockerfile
-   FROM n8n/n8n:1.19.0  # ✅ Specific version
-   FROM n8n/n8n:latest  # ❌ Unpredictable
+   FROM n8nio/n8n:1.19.0  # ✅ Specific version
+   FROM n8nio/n8n:latest  # ❌ Unpredictable
    ```
 
 2. **Layer Optimization:**

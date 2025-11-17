@@ -54,7 +54,7 @@ docker run -d \
   -e N8N_BASIC_AUTH_PASSWORD=change_this_password \
   -e GENERIC_TIMEZONE=America/New_York \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n:latest
+  n8nio/n8n:latest
 
 # Wait for container to start
 echo -e "${YELLOW}Waiting for n8n to start...${NC}"

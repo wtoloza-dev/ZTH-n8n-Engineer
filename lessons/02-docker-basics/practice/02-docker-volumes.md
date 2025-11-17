@@ -33,7 +33,7 @@ n8n stores data in `/home/node/.n8n` inside the container:
 
 ```bash
 # Run temporary container to explore
-docker run --rm -it n8n/n8n sh
+docker run --rm -it n8nio/n8n sh
 
 # Inside container
 ls -la /home/node/.n8n
@@ -92,7 +92,7 @@ docker run -d \
   --name n8n \
   -p 5678:5678 \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 ```
 
 **Command breakdown:**
@@ -150,7 +150,7 @@ docker run -d \
   --name n8n \
   -p 5678:5678 \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 ```
 
 **Access n8n at `http://localhost:5678`**
@@ -175,7 +175,7 @@ docker run -d \
   --name n8n \
   -p 5678:5678 \
   -v ~/n8n-data:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 ```
 
 **Bind mount creates directory on host:**
@@ -228,7 +228,7 @@ cat ~/n8n-data/.n8n/config
 **Method 1: Using docker cp**
 ```bash
 # Start a temporary container
-docker run -d --name n8n-temp -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -d --name n8n-temp -v n8n-data:/home/node/.n8n n8nio/n8n
 
 # Copy data out
 docker cp n8n-temp:/home/node/.n8n ./backup-n8n-data
@@ -265,7 +265,7 @@ docker run -d \
   --name n8n-restored \
   -p 5678:5678 \
   -v n8n-data-restored:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 ```
 
 ---
@@ -315,14 +315,14 @@ graph TD
 
 ```bash
 # Container 1 writes data
-docker run -d --name n8n-1 -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -d --name n8n-1 -v n8n-data:/home/node/.n8n n8nio/n8n
 
 # Stop and remove
 docker stop n8n-1
 docker rm n8n-1
 
 # Container 2 uses same data
-docker run -d --name n8n-2 -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -d --name n8n-2 -v n8n-data:/home/node/.n8n n8nio/n8n
 # ✅ Same data available
 ```
 
@@ -344,7 +344,7 @@ docker run -d \
   --name n8n \
   -p 5678:5678 \
   -v ~/n8n-data:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 ```
 
 ### Volume Not Mounting
@@ -401,14 +401,14 @@ docker run -d \
   --name n8n \
   -p 5678:5678 \
   -v n8n-data:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 
 # Run with Bind Mount
 docker run -d \
   --name n8n \
   -p 5678:5678 \
   -v ~/n8n-data:/home/node/.n8n \
-  n8n/n8n
+  n8nio/n8n
 
 # Backup Volume
 docker run --rm \

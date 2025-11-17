@@ -194,7 +194,7 @@ After passing the exam, verify your skills practically:
 # Can you do these without looking at the notes?
 
 1. Run n8n with Docker
-docker run -d --name n8n -p 5678:5678 -v n8n-data:/home/node/.n8n n8n/n8n
+docker run -d --name n8n -p 5678:5678 -v n8n-data:/home/node/.n8n n8nio/n8n
 
 2. View logs
 docker logs -f n8n
