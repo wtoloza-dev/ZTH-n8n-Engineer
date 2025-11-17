@@ -1,0 +1,49 @@
+# ZTH-n8n-Engineer .gitignore
+
+# Solutions (ocultas hasta completar ejercicios)
+solutions/*
+!solutions/.gitkeep
+
+# Archivos personales de estudiantes
+**/mi-respuesta.md
+**/mis-notas.md
+**/respuestas.txt
+
+# Docker & n8n
+.env
+.env.local
+.env.production
+*.env
+n8n_data/
+postgres_data/
+redis_data/
+
+# Backups
+backups/*.sql
+backups/*.gz
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+*.log
+logs/
+
+# Temporal
+tmp/
+temp/
+.cache/
+
+# Certificados
+*.pem
+*.key
+*.crt
+
