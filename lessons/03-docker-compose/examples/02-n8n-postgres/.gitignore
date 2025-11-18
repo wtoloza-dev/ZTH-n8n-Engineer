@@ -1,0 +1,17 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Backup files
+*.sql
+*.tar.gz
+backups/
+
+# Data directories (if using bind mounts)
+postgres-data/
+n8n-data/
+
+# Scripts logs
+*.log
+

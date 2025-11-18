@@ -1,0 +1,12 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Data directories
+n8n-data/
+
+# Backup files
+*.tar.gz
+backups/
+

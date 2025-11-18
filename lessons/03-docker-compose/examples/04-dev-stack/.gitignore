@@ -1,0 +1,20 @@
+# Environment files
+.env
+.env.local
+
+# Data directories (if using bind mounts)
+postgres-data/
+redis-data/
+n8n-data/
+custom-nodes/node_modules/
+
+# Backup files
+*.sql
+*.tar.gz
+
+# Logs
+*.log
+
+# Development files
+.DS_Store
+
